@@ -1,6 +1,6 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
-import { useAuth } from '../context/auth';
+import React from "react";
+import { Link } from "react-router-dom";
+import { useAuth } from "../context/auth";
 
 const Navbar = () => {
   const { user, logout } = useAuth();
@@ -15,21 +15,35 @@ const Navbar = () => {
               <Link to="/profile">Profile</Link>
             </div>
             <div className="flex items-center">
-              {
-                localStorage.getItem('token')
-                  ? <button onClick={logout} className="bg-red-600 hover:bg-red-500 text-gray-100 font-semibold py-2 px-4 border border-red-600 rounded-lg ml-4">
-                      Cerrar sesión
-                    </button>
-                  : <Link to="login" className="bg-gray-700 hover:bg-gray-600 text-gray-100 font-semibold py-2 px-4 border border-gray-600 rounded-lg">
-                      Iniciar sesión
-                    </Link>
-              }
+              {localStorage.getItem("token") ? (
+                <button
+                  onClick={logout}
+                  className="bg-red-600 hover:bg-red-500 text-gray-100 font-semibold py-2 px-4 border border-red-600 rounded-lg ml-4"
+                >
+                  Cerrar sesión
+                </button>
+              ) : (
+                <div className="space-x-4">
+                  <Link
+                    to="signup"
+                    className="bg-purple-700 hover:bg-gray-600 text-gray-100 font-semibold py-2 px-4 border border-gray-600 rounded-lg"
+                  >
+                    Regístrate
+                  </Link>
+                  <Link
+                    to="login"
+                    className="bg-gray-700 hover:bg-gray-600 text-gray-100 font-semibold py-2 px-4 border border-gray-600 rounded-lg"
+                  >
+                    Iniciar sesión
+                  </Link>
+                </div>
+              )}
             </div>
           </div>
         </div>
       </nav>
     </header>
-  )
-}
+  );
+};
 
-export { Navbar }
+export { Navbar };

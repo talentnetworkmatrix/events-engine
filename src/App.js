@@ -1,10 +1,11 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { AuthProvider, AuthRoute } from './context/auth'
-import { routesList } from './routes/index';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { AuthProvider, AuthRoute } from "./context/auth";
+import { routesList } from "./routes/index";
 
-import { Home } from './pages/Home';
-import { Login } from './pages/Login';
-import { Navbar } from './components/Navbar';
+import { Home } from "./pages/Home";
+import { Login } from "./pages/Login";
+import { Signup } from "./pages/Signup";
+import { Navbar } from "./components/Navbar";
 
 function App() {
   return (
@@ -14,29 +15,20 @@ function App() {
           <Navbar />
           <Routes>
             {/* Rutas Generales */}
-            <Route
-              path='/'
-              element={<Home />}
-            />
-            <Route
-              path='/login'
-              element={<Login />}
-            />
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
 
             {/* Rutas Privadas */}
-            {
-              routesList.map((route) => (
-                <Route
-                  key={route.path}
-                  path={route.path}
-                  element={
-                    <AuthRoute role={route.role}>
-                      {route.component}
-                    </AuthRoute>
-                  }
-                />
-              ))
-            }
+            {routesList.map((route) => (
+              <Route
+                key={route.path}
+                path={route.path}
+                element={
+                  <AuthRoute role={route.role}>{route.component}</AuthRoute>
+                }
+              />
+            ))}
 
             <Route path="*" element={<p>Not found</p>} />
           </Routes>

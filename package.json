@@ -7,9 +7,11 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "clsx": "^1.2.1",
+    "hyper-white-theme": "^1.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.43.2",
+    "react-icons": "^4.7.1",
     "react-router-dom": "^6.8.1",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"

@@ -59,15 +59,15 @@ function Home() {
               <HiMenuAlt3 className="h-6 w-6" aria-hidden="true" />
             </button>
           </div>
-          <div className="hidden lg:flex lg:gap-x-12">
+          <div className="hidden lg:flex lg:gap-x-2">
             {navigation.map((item) => (
-              <a key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-gray-900">
+              <a key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-gray-900 hover:text-green-500 rounded-md hover:shadow-inner px-3 py-2 bg-transparent hover:bg-gray-100 cursor-pointer transition duration-500 ease-in-out"> 
                 {item.name}
               </a>
             ))}
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <Link to="/login" className="text-sm font-bold leading-6 text-blue-900 hover:text-green-600 hover:text-underline hover:rounded-md hover:px-3 hover:bg-gray-200 cursor-pointer"> 
+            <Link to="/login" className="text-sm font-bold leading-6 text-blue-900 hover:text-green-500 rounded-md px-3 py-2 bg-gray-50 hover:bg-gray-200 cursor-pointer transition duration-300 ease-in-out shadow-sm">
               Iniciar Sesión
             </Link>
           </div>
@@ -133,7 +133,7 @@ function Home() {
                 >
                   Iniciar Sesión
                 </p>
-                <p href="#" className="text-sm font-semibold leading-6 text-gray-900 cursor-pointer">
+                <p href="#" className="text-sm font-semibold leading-6 text-gray-900 hover:text-green-500 rounded-md hover:shadow-inner px-3 py-2 bg-transparent hover:bg-gray-100 cursor-pointer transition duration-500 ease-in-out"> 
                   Crear cuenta  <span aria-hidden="true">→</span>
                 </p>
               </div>

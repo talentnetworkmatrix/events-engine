@@ -6,11 +6,11 @@ import ContentTravel from './ContentTravel';
 import ContentSpeaker from './ContentSpeaker';
 import ContenidosContent from './ContenidosContent';
 
-const ContentComponent = ({ currentView, setCurrentView }) => {
+const ContentComponent = ({ currentView, setCurrentView, setActive }) => {
     return (
         <div className='w-full h-full flex flex-col justify-center items-center dark:bg-gray-800'>
             {currentView === 'Home' && (
-                <ContentHome setCurrentView={setCurrentView} />
+                <ContentHome setCurrentView={setCurrentView} setActive={setActive} />
             )}
             {currentView === 'Calendar' && <ContentCalendar />}
             {currentView === 'Config' && <ContentConfig />}

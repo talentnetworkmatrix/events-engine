@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 
-const ContentHome = ({ handleViewChange }) => {
+const ContentHome = ({ handleViewChange, setActive }) => {
   const [section, setSection] = useState(null)
+  section && console.log(section)
 
   const eachSection = [
     {
@@ -36,7 +37,7 @@ const ContentHome = ({ handleViewChange }) => {
 
   const handleSection = (section) => {
     setSection(section)
-    handleViewChange(section.view) // actualizar la vista en función de la propiedad view
+    handleViewChange(section.view)
   }
 
   return (
@@ -47,7 +48,7 @@ const ContentHome = ({ handleViewChange }) => {
             <div className='bg-white gap-2 flex flex-col shadow-md p-5 rounded-md min-w-[280px] min-h-[280px]'>
               <h2 className='text-2xl font-bold uppercase text-center'>{section.title}</h2>
               {section.list.map((item, index) => (
-                <p 
+                <p
                   className='hover:bg-green-500 active:bg-green-600 active:text-white active:transition active:ease-in-out active:rounded-full transition ease-in-out p-2 rounded-sm shadow-sm cursor-pointer'
                   onClick={() => handleSection(section)} key={index}>
                   {item}

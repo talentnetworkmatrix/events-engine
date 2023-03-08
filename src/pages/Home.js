@@ -67,8 +67,8 @@ function Home() {
             ))}
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <Link to="/login" className="text-sm font-semibold leading-6 text-gray-900 hover:text-gray-700 cursor-pointer"> 
-              Iniciar Sesión <span aria-hidden="true">&rarr;</span>
+            <Link to="/login" className="text-sm font-bold leading-6 text-blue-900 hover:text-green-600 hover:text-underline hover:rounded-md hover:px-3 hover:bg-gray-200 cursor-pointer"> 
+              Iniciar Sesión
             </Link>
           </div>
         </nav>
@@ -129,11 +129,11 @@ function Home() {
               <div className="mt-10 flex items-center justify-center gap-x-6">
                 <p
                   href="#"
-                  className="rounded-md bg-green-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
+                  className="rounded-md bg-green-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600 cursor-pointer"
                 >
                   Iniciar Sesión
                 </p>
-                <p href="#" className="text-sm font-semibold leading-6 text-gray-900">
+                <p href="#" className="text-sm font-semibold leading-6 text-gray-900 cursor-pointer">
                   Crear cuenta  <span aria-hidden="true">→</span>
                 </p>
               </div>

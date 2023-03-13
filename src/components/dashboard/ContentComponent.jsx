@@ -1,22 +1,30 @@
 import React from 'react';
-import ContentHome from './ContentHome';
+import ContentHomeComponent from './ContentHomeComponent';
 import ContentCalendar from './ContentCalendar';
-import ContentConfig from './ContentConfig';
-import ContentTravel from './ContentTravel';
-import ContentSpeaker from './ContentSpeaker';
-import ContenidosContent from './ContenidosContent';
+import ContentConfigComponent from './ContentConfigComponent';
+import ContentTravelComponent from './ContentTravelComponent';
+import ContentSpeakerComponent from './ContentSpeakerComponent';
+import ContenidosContentComponent from './Contenidos/ContenidosContentComponent';
+import SpeakersListComponent from './Contenidos/SpeakersListComponent';
 
-const ContentComponent = ({ currentView, setCurrentView, setActive }) => {
+const ContentComponent = ({
+        currentView,
+        setCurrentView,
+        setActive,
+        handleViewChange
+    }) => {
+
     return (
         <div className='w-full h-full flex flex-col justify-center items-center dark:bg-gray-800'>
             {currentView === 'Home' && (
-                <ContentHome setCurrentView={setCurrentView} setActive={setActive} />
+                <ContentHomeComponent setCurrentView={setCurrentView} setActive={setActive} />
             )}
             {currentView === 'Calendar' && <ContentCalendar />}
-            {currentView === 'Config' && <ContentConfig />}
-            {currentView === 'Travel' && <ContentTravel />}
-            {currentView === 'Speakers' && <ContentSpeaker />}
-            {currentView === 'Contenidos' && <ContenidosContent />}
+            {currentView === 'Config' && <ContentConfigComponent />}
+            {currentView === 'Travel' && <ContentTravelComponent />}
+            {currentView === 'Speakers' && <ContentSpeakerComponent />}
+            {currentView === 'Contenidos' && <ContenidosContentComponent handleViewChange={handleViewChange} />}
+            {currentView === 'SpeakersList' && <SpeakersListComponent handleViewChange={handleViewChange} />}
         </div>
     );
 };

@@ -3,10 +3,12 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "hero-pattern": "url('/src/assets/images/default.jpeg')",
-        "logo": "url('/src/assets/images/tn.png')",
+        "hero-pattern": "url('/src/assets/images/default.jpeg')"
       },
     },
   },
   plugins: [],
+  corePlugins : {
+    transitionWidth: true,
+  },
 };

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ContentTravel = () => {
+const ContentTravelComponent = () => {
     const travelButtonClasses = 'bg-blue-900 text-white rounded-md shadow-md p-5 max-w-sm'
     return (
         <div className='bg-gray-200 w-full h-full flex flex-col text-4xl'>
@@ -14,4 +14,4 @@ const ContentTravel = () => {
     )
 }
 
-export default ContentTravel
+export default ContentTravelComponent

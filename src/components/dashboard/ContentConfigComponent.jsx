@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ContentConfig = () => {
+const ContentConfigComponent = () => {
   return (
     <div
       className='bg-gray-200 w-full h-full flex flex-col justify-center items-center text-4xl'
@@ -8,4 +8,4 @@ const ContentConfig = () => {
   )
 }
 
-export default ContentConfig
+export default ContentConfigComponent

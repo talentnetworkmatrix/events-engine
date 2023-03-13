@@ -61,7 +61,7 @@ function Home() {
           </div>
           <div className="hidden lg:flex lg:gap-x-2">
             {navigation.map((item) => (
-              <a key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-gray-900 hover:text-green-500 rounded-md hover:shadow-inner px-3 py-2 bg-transparent hover:bg-gray-100 cursor-pointer transition duration-500 ease-in-out"> 
+              <a key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-gray-900 hover:text-green-500 rounded-lg hover:shadow-inner px-3 py-2 bg-transparent hover:bg-gray-100 cursor-pointer transition duration-500 ease-in-out" target="_blank" rel="noreferrer">
                 {item.name}
               </a>
             ))}

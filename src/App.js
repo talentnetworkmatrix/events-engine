@@ -5,14 +5,14 @@ import { routesList } from "./routes/index";
 import { Home } from "./pages/Home";
 import { Login } from "./pages/Login";
 import { Signup } from "./pages/Signup";
-import { Navbar } from "./components/Navbar";
+// import { Navbar } from "./components/Navbar";
 
 function App() {
   return (
     <>
       <BrowserRouter>
         <AuthProvider>
-          <Navbar />
+          {/* <Navbar /> */}
           <Routes>
             {/* Rutas Generales */}
             <Route path="/" element={<Home />} />

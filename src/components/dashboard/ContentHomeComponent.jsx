@@ -128,7 +128,7 @@ const ContentHomeComponent = ({ handleViewChange, setActive }) => {
               <h2 className='text-2xl font-bold uppercase text-center'>{section.title}</h2>
               {section.list.map((item, index) => (
                 <p
-                  className='hover:bg-green-500 active:bg-green-600 active:text-white active:transition active:ease-in-out active:rounded-full transition ease-in-out p-2 rounded-sm shadow-sm cursor-pointer'
+                  className='hover:bg-green-500 active:bg-green-600 active:text-white active:transition active:ease-in-out active:bg-green-800 transition ease-in-out p-2 rounded-sm shadow-sm cursor-pointer'
                   onClick={() => handleSection(section)} key={index}>
                   {item}
                 </p>
